@@ -20,6 +20,7 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddSingleton<dotnet_Api.Data.MongoDB>();
             services.AddControllers();
             // services.AddSwaggerGen(c =>
             // {

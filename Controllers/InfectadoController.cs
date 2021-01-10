@@ -1,5 +1,4 @@
 using dotnet_Api.Data.Collections;
-using dotnet_Api.Data;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using dotnet_Api.Models;
@@ -10,10 +9,10 @@ namespace Api.Controllers
     [Route("[controller]")]
     public class InfectadoController : ControllerBase
     {
-        Data.MongoDB _mongoDB;
+        dotnet_Api.Data.MongoDB _mongoDB;
         IMongoCollection<Infectado> _infectadosCollection;
 
-        public InfectadoController(Data.MongoDB mongoDB)
+        public InfectadoController(dotnet_Api.Data.MongoDB mongoDB)
         {
             _mongoDB = mongoDB;
             _infectadosCollection = _mongoDB.DB.GetCollection<Infectado>(typeof(Infectado).Name.ToLower());

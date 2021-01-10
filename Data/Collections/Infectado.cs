@@ -1,6 +1,5 @@
 using System;
-
-using System;
+using MongoDB.Driver.GeoJsonObjectModel;
 
 namespace dotnet_Api.Data.Collections
 {
